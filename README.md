@@ -49,7 +49,7 @@ The 7th call will hang on connection pool. Pool size used in test is 6.
    breakpoint at line 43, where `selectFromDb();` method is called.
    ![1](img/1.PNG)
 2. Open `PoolingDataSource` class from `commons-dbcp2` dependency and add two breakpoints in 
-   `getConnection` method on lines 141 and 142. 
+   `getConnection` method on lines 141 and 142. </br>
    ![2](img/2.PNG)
 3. Start `Jdbi3IntegrationTest::testMe()` test in debug mode.
    ![3](img/3.PNG)
