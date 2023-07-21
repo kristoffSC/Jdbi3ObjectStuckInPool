@@ -75,7 +75,8 @@ The 7th call will hang on connection pool. Pool size used in test is 6.
 
 Optionally you can also put a breakpoint in Handle object in line 121. You will see then, that 
 after step 7th, no `Cleanable` will be registered on created Handle because of connection 
-livecheck. ![9](img/9.PNG)
+livecheck. </br>
+![9](img/9.PNG)
 
 ## Happy Path
 - Add extra breakpoint in `GenericObjectPool::returnObject` method from `commons-pool2` library.
