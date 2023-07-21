@@ -40,7 +40,7 @@ public class Jdbi3IntegrationTest {
   @Test
   public void testMe() {
     for (int i = 0; i < 15; i++) {
-      selectFromDb(); // put break point here
+      selectFromDb(); // put breakpoint here
     }
   }
 
