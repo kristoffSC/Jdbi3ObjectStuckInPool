@@ -3,6 +3,7 @@ package org.example;
 import java.util.List;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.jdbi.v3.core.Jdbi;
+import org.jdbi.v3.postgres.PostgresPlugin;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,7 +35,9 @@ public class Jdbi3IntegrationTest {
     dataSource.setMaxTotal(6);
     //dataSource.setMaxWaitMillis(5000);
 
-    this.jdbi = Jdbi.create(dataSource).installPlugin(new SqlObjectPlugin());
+    this.jdbi = Jdbi.create(dataSource)
+        .installPlugin(new SqlObjectPlugin())
+        .installPlugin(new PostgresPlugin());
   }
 
   @Test
